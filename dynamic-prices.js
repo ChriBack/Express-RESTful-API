@@ -1,9 +1,10 @@
 var fs = require("fs");
-var contents = fs.readFileSync("./dynaimc-prices.json");
-var jsonContent = JSON.parse(contents);
 var uuid = require('uuid');
 var bodyParser = require('body-parser');
 var _ = require('underscore');
+
+var contents = fs.readFileSync("./dynaimc-prices.json");
+var jsonContent = JSON.parse(contents);
 
 module.exports = {
 	getDynPrices: function (req, res) {
